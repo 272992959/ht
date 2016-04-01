@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>上海厚步网络科技有限公司</title>
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/main.css" media="all" />
+    <script type="text/javascript">
+        document.getElementsByClassName === undefined && (location.href = "not_support.html");
+    </script>
+    <style type="text/css">
+        .main_content{
+            max-width: 1280px;
+            margin: 0 auto 50px;
+        }
+        .docking_title{
+            margin: 20px 0 2px;
+            padding: 5px;
+            background: #F5F5F5;
+            color: #18CDC4;
+            border-left: 5px solid #18CDC4;
+        }
+        .docking_title>.field{
+            font-size: 20px;
+            padding-top: 0px;
+            vertical-align: middle;
+        }
+        .docking_title>.field+.ct_4-3{
+            vertical-align: middle;
+        }
+        .docking_content{
+            padding: 10px;
+            padding-right: 30px;
+            border: 1px solid #ddd;
+        }
+        .docking_content .field{
+            text-align: right;
+            color: #666;
+        }
+        .docking_content>.grid_nowrap>.field{
+            text-align: left;
+            color: #000;
+            font-size: 15px;
+        }
+        .param_item:only-child .icon_remove{
+            display: none;
+        }
+        .param_item:not(:last-child){
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 5px;
+        }
+        .icon_plus_ct{
+            text-align: right;
+        }
+        .icon_plus,.icon_remove{
+            color: #fff;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+        .icon_plus{
+            background-color: #1885CD;
+            padding: 10px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .icon_remove{
+            color: #CD3718;
+            position: absolute;
+            font-size: 20px;
+            line-height: 20px;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .docking_content .field{
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="top_bar">
+            <p class="logo">LOGO</p>
+            <i class="iconfont icon-654 toggle_another_form"></i>
+        </div>
+        <ul class="menu">
+            <li>
+                <a href="todo.html">
+                    <i class="iconfont icon-605"></i>
+                    <span class="title">TODO</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont icon-616"></i>
+                    <span class="title">UI组件</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="grid.html" class="title">网格布局(grid)</a></li>
+                    <li><a href="button.html" class="title">按钮(button)</a></li>
+                    <li><a href="form_element.html" class="title">表单元素(form-element)</a></li>
+                    <li><a href="validate.html" class="title">验证(validate)</a></li>
+                    <li><a href="mask.html" class="title">遮罩(mask)</a></li>
+                    <li><a href="tip.html" class="title">提示(tip)</a></li>
+                    <li><a href="box.html" class="title">弹框(box)</a></li>
+                    <li><a href="icon_font.html" class="title">图标(iconfont)</a></li>
+                    <li><a href="expression.html" class="title">表情(expression)</a></li>
+                    <li><a href="datepicker.html" class="title">日期控件(datepicker)</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont icon-67f"></i>
+                    <span class="title">图表</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="chart1.html" class="title">图表1</a></li>
+                    <li><a href="chart2.html" class="title">图表2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont icon-6b2"></i>
+                    <span class="title">表格</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="table1.html" class="title">表格1</a></li>
+                    <li><a href="table2.html" class="title">表格2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="form.html">
+                    <i class="iconfont icon-6aa"></i>
+                    <span class="title">表单页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="push.html" target="_blank">
+                    <i class="iconfont icon-6f6"></i>
+                    <span class="title">推送</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li class=active>
+                <a href="docking.html">
+                    <i class="iconfont icon-6f6"></i>
+                    <span class="title">对接</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="welcome.html">
+                    <i class="iconfont icon-617"></i>
+                    <span class="title">欢迎页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html">
+                    <i class="iconfont icon-768"></i>
+                    <span class="title">登录页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="404.html">
+                    <i class="iconfont icon-6f4"></i>
+                    <span class="title">404</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="error.html">
+                    <i class="iconfont icon-686"></i>
+                    <span class="title">错误页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="not_support.html">
+                    <i class="iconfont icon-79b"></i>
+                    <span class="title">不支持页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont icon-6e5"></i>
+                    <span class="title">个人中心</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="#" class="title">我的信息</a></li>
+                    <li><a href="#" class="title">修改密码</a></li>
+                    <li><a href="#" class="title">退出登录</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <div class="content">
+        <div class="main_content">
+            <h1>来赚对接页面（dock） <small>-2016-03-31</small></h1>
+            <div class="grid_nowrap docking_title">
+                <div class="ct_4 field">
+                    排重接口
+                </div>
+                <div class="ct_4-3">
+                    <label class="whether">
+                        <input type="checkbox" checked data-show=".unique_docking_content" name="unique" id="unique">
+                        <span class="opt_imitate">是</span>
+                        <span class="opt_imitate">否</span>
+                    </label>
+                </div>
+            </div>
+            <div class="docking_content unique_docking_content">
+                <div class="grid_nowrap">
+                    <div class="ct_4 field">
+                        接口地址
+                    </div>
+                    <div class="ct_4-3 grid">
+                        <div class="ct_5">
+                            <select name="unique_req_type" id="unique_req_type">
+                                <option value="1">GET方式</option>
+                                <option value="2">POST方式</option>
+                            </select>
+                        </div>
+                        <div class="ct_5-4 grid_nowrap">
+                            <div class="ct_6 field">url</div>
+                            <div class="ct_6-5">
+                                <input type="text" name="unique_req_url" id="unique_req_url">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_nowrap">
+                    <div class="ct_4 field">
+                        参数形式
+                    </div>
+                    <div class="ct_4-3 grid param_items">
+
+                    </div>
+                    <div class="ct icon_plus_ct">
+                        <i class="iconfont icon-752 icon_plus"></i>
+                    </div>
+                </div>
+                <div class="grid_nowrap">
+                    <div class="ct_4 field">
+                        返回值
+                    </div>
+                    <div class="ct_4-3 grid">
+                        <div class="ct grid">
+                            <div class="ct_5">已激活</div>
+                            <div class="ct_5-2 grid_nowrap">
+                                <div class="ct_3 field">key</div>
+                                <div class="ct_3-2">
+                                    <input type="text" name="unique_return_active_key" id="unique_return_active_key">
+                                </div>
+                            </div>
+                            <div class="ct_5-2 grid_nowrap">
+                                <div class="ct_3 field">value</div>
+                                <div class="ct_3-2">
+                                    <input type="text" name="unique_return_active_val" id="unique_return_active_val">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ct grid">
+                            <div class="ct_5">未激活</div>
+                            <div class="ct_5-2 grid_nowrap">
+                                <div class="ct_3 field">key</div>
+                                <div class="ct_3-2">
+                                    <input type="text" name="unique_return_no_active_key" id="unique_return_no_active_key">
+                                </div>
+                            </div>
+                            <div class="ct_5-2 grid_nowrap">
+                                <div class="ct_3 field">value</div>
+                                <div class="ct_3-2">
+                                    <input type="text" name="unique_return_no_active_val" id="unique_return_no_active_val">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_nowrap">
+                    <div class="ct_4 field">
+                        MD5加密
+                    </div>
+                    <div class="ct_4-3 grid">
+                        <div class="ct_5">
+                            <label class="whether">
+                                <input type="checkbox" checked data-show=".unique_md5_content" id="unique_ismd5" name="unique_ismd5">
+                                <span class="opt_imitate">是</span>
+                                <span class="opt_imitate">否</span>
+                            </label>
+                        </div>
+                        <div class="ct_5-4 grid unique_md5_content">
+                            <div class="ct_2 grid_nowrap">
+                                <div class="ct_3 field">key</div>
+                                <div class="ct_3-2">
+                                    <input type="text" id="unique_md5_key" name="unique_md5_key">
+                                </div>
+                            </div>
+                            <div class="ct_2 grid_nowrap">
+                                <div class="ct_3 field">value</div>
+                                <div class="ct_3-2">
+                                    <input type="text" id="unique_md5_val" name="unique_md5_val">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_nowrap docking_title">
+                <div class="ct_4 field">
+                    点击上报
+                </div>
+                <div class="ct_4-3">
+                    <label class="whether">
+                        <input type="checkbox" data-show=".click_docking_content" name="click" id="click">
+                        <span class="opt_imitate">是</span>
+                        <span class="opt_imitate">否</span>
+                    </label>
+                </div>
+            </div>
+            <div class="docking_content click_docking_content hidden">
+                <div class="grid_nowrap">
+                    <div class="ct_4 field">
+                        接口地址
+                    </div>
+                    <div class="ct_4-3 grid">
+                        <div class="ct_5">
+                            <select name="click_req_type" id="click_req_type">
+                                <option value="1">GET方式</option>
+                                <option value="2">POST方式</option>
+                            </select>
+                        </div>
+                        <div class="ct_5-4 grid_nowrap">
+                            <div class="ct_6 field">url</div>
+                            <div class="ct_6-5">
+                                <input type="text" name="click_req_url" id="click_req_url">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_nowrap">
+                    <div class="ct_4 field">
+                        参数形式
+                    </div>
+                    <div class="ct_4-3 grid param_items">
+
+                    </div>
+                    <div class="ct icon_plus_ct">
+                        <i class="iconfont icon-752 icon_plus"></i>
+                    </div>
+                </div>
+                <div class="grid_nowrap">
+                    <div class="ct_4 field">
+                        返回值
+                    </div>
+                    <div class="ct_4-3 grid">
+                        <div class="ct_5">
+                            <label class="whether">
+                                <input type="checkbox" checked data-show=".click_return_content" id="click_ismd5" name="click_ismd5">
+                                <span class="opt_imitate">是</span>
+                                <span class="opt_imitate">否</span>
+                            </label>
+                        </div>
+                        <div class="ct_5-4 grid click_return_content">
+                            <div class="ct_2 grid_nowrap">
+                                <div class="ct_3 field">key</div>
+                                <div class="ct_3-2">
+                                    <input type="text" id="click_return_key" name="click_return_key">
+                                </div>
+                            </div>
+                            <div class="ct_2 grid_nowrap">
+                                <div class="ct_3 field">value</div>
+                                <div class="ct_3-2">
+                                    <input type="text" id="click_return_val" name="click_return_val">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_nowrap">
+                    <div class="ct_4 field">
+                        MD5加密
+                    </div>
+                    <div class="ct_4-3 grid">
+                        <div class="ct_5">
+                            <label class="whether">
+                                <input type="checkbox" checked data-show=".click_md5_content" id="click_ismd5" name="click_ismd5">
+                                <span class="opt_imitate">是</span>
+                                <span class="opt_imitate">否</span>
+                            </label>
+                        </div>
+                        <div class="ct_5-4 grid click_md5_content">
+                            <div class="ct_2 grid_nowrap">
+                                <div class="ct_3 field">key</div>
+                                <div class="ct_3-2">
+                                    <input type="text" id="click_md5_key" name="click_md5_key">
+                                </div>
+                            </div>
+                            <div class="ct_2 grid_nowrap">
+                                <div class="ct_3 field">value</div>
+                                <div class="ct_3-2">
+                                    <input type="text" id="click_md5_val" name="click_md5_val">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_nowrap docking_title">
+                <div class="ct_4 field">
+                    激活上报
+                </div>
+                <div class="ct_4-3">
+                    <label class="whether">
+                        <input type="checkbox" data-show=".active_docking_content" name="active" id="active">
+                        <span class="opt_imitate">是</span>
+                        <span class="opt_imitate">否</span>
+                    </label>
+                </div>
+            </div>
+            <div class="docking_content active_docking_content hidden">
+                <div class="grid_nowrap">
+                    <div class="ct_4 field">
+                        接口地址
+                    </div>
+                    <div class="ct_4-3 grid">
+                        <div class="ct_5">
+                            <select name="active_req_type" id="active_req_type">
+                                <option value="1">GET方式</option>
+                                <option value="2">POST方式</option>
+                            </select>
+                        </div>
+                        <div class="ct_5-4 grid_nowrap">
+                            <div class="ct_6 field">url</div>
+                            <div class="ct_6-5">
+                                <input type="text" name="active_req_url" id="active_req_url">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_nowrap">
+                    <div class="ct_4 field">
+                        参数形式
+                    </div>
+                    <div class="ct_4-3 grid param_items">
+
+                    </div>
+                    <div class="ct icon_plus_ct">
+                        <i class="iconfont icon-752 icon_plus"></i>
+                    </div>
+                </div>
+                <div class="grid_nowrap">
+                    <div class="ct_4 field">
+                        返回值
+                    </div>
+                    <div class="ct_4-3 grid">
+                        <div class="ct_5">
+                            <label class="whether">
+                                <input type="checkbox" checked data-show=".active_return_content" id="active_ismd5" name="active_ismd5">
+                                <span class="opt_imitate">是</span>
+                                <span class="opt_imitate">否</span>
+                            </label>
+                        </div>
+                        <div class="ct_5-4 grid active_return_content">
+                            <div class="ct_2 grid_nowrap">
+                                <div class="ct_3 field">key</div>
+                                <div class="ct_3-2">
+                                    <input type="text" id="active_return_key" name="active_return_key">
+                                </div>
+                            </div>
+                            <div class="ct_2 grid_nowrap">
+                                <div class="ct_3 field">value</div>
+                                <div class="ct_3-2">
+                                    <input type="text" id="active_return_val" name="active_return_val">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid_nowrap">
+                    <div class="ct_4 field">
+                        MD5加密
+                    </div>
+                    <div class="ct_4-3 grid">
+                        <div class="ct_5">
+                            <label class="whether">
+                                <input type="checkbox" checked data-show=".active_md5_content" id="active_ismd5" name="active_ismd5">
+                                <span class="opt_imitate">是</span>
+                                <span class="opt_imitate">否</span>
+                            </label>
+                        </div>
+                        <div class="ct_5-4 grid active_md5_content">
+                            <div class="ct_2 grid_nowrap">
+                                <div class="ct_3 field">key</div>
+                                <div class="ct_3-2">
+                                    <input type="text" id="active_md5_key" name="active_md5_key">
+                                </div>
+                            </div>
+                            <div class="ct_2 grid_nowrap">
+                                <div class="ct_3 field">value</div>
+                                <div class="ct_3-2">
+                                    <input type="text" id="active_md5_val" name="active_md5_val">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/echarts.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/renderChart.js"></script>
+    <script src="../js/table.js"></script>
+    <script src="../js/mask.js"></script>
+    <script src="../js/tip.js"></script>
+    <script src="../js/box.js"></script>
+    <script src="../js/expression.js"></script>
+    <script src="../js/datepicker.js"></script>
+    <script src="../js/common.js"></script>
+<script type="text/javascript">
+    $(".icon_plus").bind("click",function(){
+        var prefix;
+        var docking = $(this).closest('.docking_content');
+        if(docking.is('.unique_docking_content')){
+            prefix = "unique_";
+        }else if(docking.is('.click_docking_content')){
+            prefix = "click_";
+        }else if(docking.is('.active_docking_content')){
+            prefix = "active_";
+        }
+
+        var idx = $(this).data("data-index") || 0;
+        var param_item = $('<div class="ct grid param_item">'
+                                +'<div class="ct_5">'
+                                    +'<select id="'+prefix+'param_type_'+idx+'" name="'+prefix+'param_type_'+idx+'">'
+                                        +'<option value="1" data-show="#'+prefix+'system_val_'+idx+'">系统值</option>'
+                                        +'<option value="2" data-show="#'+prefix+'preset_val_'+idx+'">预设值</option>'
+                                    +'</select>'
+                                +'</div>'
+                                +'<div class="ct_5-4 grid">'
+                                    +'<div class="ct_2 grid_nowrap">'
+                                        +'<div class="ct_3 field">key</div>'
+                                        +'<div class="ct_3-2">'
+                                            +'<input type="text" id="'+prefix+'param_key_'+idx+'" name="'+prefix+'param_key_'+idx+'">'
+                                        +'</div>'
+                                    +'</div>'
+                                    +'<div class="ct_2 grid_nowrap">'
+                                        +'<div class="ct_3 field">value</div>'
+                                        +'<div class="ct_3-2">'
+                                            +'<select id="'+prefix+'system_val_'+idx+'" name="'+prefix+'system_val_'+idx+'">'
+                                                +'<option value="1">idfa</option>'
+                                                +'<option value="2">2</option>'
+                                                +'<option value="3">3</option>'
+                                                +'<option value="4">4</option>'
+                                            +'</select>'
+                                            +'<input type="text" class="hidden" id="'+prefix+'preset_val_'+idx+'" name="'+prefix+'preset_val_'+idx+'">'
+                                        +'</div>'
+                                    +'</div>'
+                                +'</div>'
+                                +'<i class="iconfont icon-606 icon_remove"></i>'
+                            +'</div>');
+        $(this).closest(".docking_content").find(".param_items").append(param_item);
+        $(this).data("data-index",++idx);
+    }).trigger('click');
+
+    $('body').on('click','.icon_remove',function(){
+        $(this).closest('.param_item').remove();
+    });
+</script>
+    <div id="to_top">
+        <i class="iconfont icon-6cf"></i>
+    </div>
+</body>
+
+</html>

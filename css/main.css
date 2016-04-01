@@ -183,6 +183,12 @@ th {
 .grid_lg {
   font-size: 0;
 }
+.grid_nowrap > .field,
+.grid > .field,
+.grid_md > .field,
+.grid_lg > .field {
+  padding-top: 10px;
+}
 .grid_nowrap > .ct,
 .grid > .ct,
 .grid_md > .ct,
@@ -451,7 +457,7 @@ th {
 .grid_md > .ct_6-5 > .grid_lg,
 .grid_lg > .ct_6-5 > .grid_lg {
   font-size: 0;
-  margin: -5px;
+  padding: 0;
 }
 .grid_nowrap > .ct.grid_nowrap,
 .grid > .ct.grid_nowrap,
@@ -780,33 +786,61 @@ th {
     width: 100%;
   }
 }
-table {
+.table_filter {
+  font-size: 0;
+  padding: 5px 0;
+}
+.table_filter .page_size {
+  line-height: 30px;
+  position: absolute;
+  font-size: 14px;
+}
+.table_filter .page_size select {
+  width: auto;
+  height: 20px;
+  vertical-align: baseline;
+  margin: 0 3px;
+}
+.table_filter .filter_key,
+.table_filter .filter_val {
+  width: 50%;
+  display: inline-block;
+}
+.table_filter .filter_key {
+  text-align: right;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+.table_filter .filter_key select {
+  width: auto;
+}
+table.table {
   width: 100%;
   border: 1px solid #cccccc;
   text-align: left;
 }
-table th,
-table td {
+table.table th,
+table.table td {
   border: 1px solid #cccccc;
   padding: 5px 10px;
 }
-table th {
+table.table th {
   color: #333333;
   background-color: #eeeeee;
 }
-table th.sort,
-table th.sort_asc,
-table th.sort_desc {
+table.table th.sort,
+table.table th.sort_asc,
+table.table th.sort_desc {
   padding-right: 16px;
   position: relative;
   cursor: pointer;
 }
-table th.sort:before,
-table th.sort_asc:before,
-table th.sort_desc:before,
-table th.sort:after,
-table th.sort_asc:after,
-table th.sort_desc:after {
+table.table th.sort:before,
+table.table th.sort_asc:before,
+table.table th.sort_desc:before,
+table.table th.sort:after,
+table.table th.sort_asc:after,
+table.table th.sort_desc:after {
   content: '';
   width: 0;
   height: 0;
@@ -819,45 +853,61 @@ table th.sort_desc:after {
   border-top-width: 0px;
   border-bottom-width: 8px;
 }
-table th.sort:after,
-table th.sort_asc:after,
-table th.sort_desc:after {
+table.table th.sort:after,
+table.table th.sort_asc:after,
+table.table th.sort_desc:after {
   margin-top: 1px;
   border-top-color: #888888;
   border-bottom-width: 0px;
   border-top-width: 8px;
 }
-table th.sort_asc:before {
+table.table th.sort_asc:before {
   margin-top: -4px;
   border-bottom-color: #333333;
 }
-table th.sort_asc:after {
+table.table th.sort_asc:after {
   content: none;
 }
-table th.sort_desc:before {
+table.table th.sort_desc:before {
   content: none;
 }
-table th.sort_desc:after {
+table.table th.sort_desc:after {
   margin-top: -4px;
   border-top-color: #333333;
 }
-table td {
+table.table td {
   color: #555555;
 }
-table + .page .table_info,
-table + .page .table_btns {
+table.table + .table_foot {
+  font-size: 0;
+  padding-bottom: 20px;
+}
+table.table + .table_foot .table_info,
+table.table + .table_foot .table_btns {
+  display: inline-block;
+  font-size: 13px;
   white-space: nowrap;
   color: #999999;
   line-height: 50px;
+  vertical-align: top;
 }
-table + .page .table_btns {
+table.table + .table_foot .table_info {
+  width: 40%;
+}
+table.table + .table_foot .table_btns {
   text-align: right;
   white-space: nowrap;
+  width: 60%;
 }
-table + .page .table_btns [class^='btn']:last-child {
+table.table + .table_foot .table_btns .btn:last-child {
   margin-right: 0;
 }
-table + .page .table_btns label {
+table.table + .table_foot .table_btns .btn.active {
+  color: #fff;
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+}
+table.table + .table_foot .table_btns label {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -865,7 +915,7 @@ table + .page .table_btns label {
   -o-user-select: none;
   user-select: none;
 }
-table + .page .table_btns label .curPage {
+table.table + .table_foot .table_btns label .cur_page {
   width: 50px;
   height: auto;
   text-align: center;
@@ -874,35 +924,45 @@ table + .page .table_btns label .curPage {
   border-radius: 0;
   color: #333333;
 }
-table + .page .table_btns .prev {
+table.table + .table_foot .table_btns .prev {
   margin-right: 10px;
 }
-table + .page .table_btns .next {
+table.table + .table_foot .table_btns .next {
   margin-left: 10px;
 }
 @media (max-width: 768px) {
-  table + .page .table_info {
+  .table_filter .filter_key,
+  .table_filter .filter_val {
+    width: 100%;
+  }
+  .table_filter .filter_key {
+    padding-right: 0;
+    padding-bottom: 5px;
+  }
+  table.table + .table_foot .table_info {
+    width: 100%;
     text-align: right;
     font-size: 12px;
     line-height: 20px;
   }
-  table + .page .table_btns {
+  table.table + .table_foot .table_btns {
+    width: 100%;
     text-align: center;
     line-height: 30px;
   }
-  table + .page .table_btns label .curPage {
+  table.table + .table_foot .table_btns label .cur_page {
     font-size: 12px;
     line-height: 1em;
   }
 }
 @media (max-width: 992px) {
-  table + .page .table_btns [class^='btn'] {
+  table.table + .table_foot .table_btns [class^='btn'] {
     padding: 3px 6px;
   }
-  table + .page .table_btns [class^='btn']:last-child {
+  table.table + .table_foot .table_btns [class^='btn']:last-child {
     margin-right: 0;
   }
-  table + .page .table_btns label .curPage {
+  table.table + .table_foot .table_btns label .cur_page {
     padding: 3px 0;
   }
 }
@@ -1290,7 +1350,7 @@ textarea {
 .whether {
   position: relative;
   display: inline-block;
-  background-color: #ffffff;
+  background-color: inherit;
   overflow: hidden;
   box-sizing: border-box;
   vertical-align: middle;
@@ -3175,12 +3235,14 @@ body {
   font-family: Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 .hidden {
-  display: none;
+  display: none!important;
 }
-.nowrap {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+@media (min-width: 768px) {
+  .nowrap {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
 .sidebar {
   position: absolute;
@@ -3202,7 +3264,7 @@ body {
   font-family: Open Sans Condensed, sans-serif;
   font-size: 3em;
   color: #ffffff;
-  background: #3ab0ff;
+  background-color: #3ab0ff;
   line-height: 65px;
   text-align: center;
   width: 100%;
@@ -3232,7 +3294,7 @@ body {
   position: absolute;
   top: 100%;
   margin-bottom: 200px;
-  background: #26344b;
+  background-color: #26344b;
   border-bottom: 5px solid #47556B;
   width: 150px;
   z-index: 999;
@@ -3478,7 +3540,7 @@ body {
   background-color: #ffffff;
   position: relative;
   min-width: 320px;
-  padding: 5px 10px;
+  padding: 3px 5px;
   box-sizing: border-box;
   -webkit-transition: margin-left 0.3s 0.2s;
   transition: margin-left 0.3s 0.2s;
@@ -3487,7 +3549,7 @@ body {
   line-height: 2em;
   font-size: 2em;
   text-indent: .5em;
-  color: #666666;
+  color: #18CDC4;
   margin-top: 0;
   margin-bottom: 15px;
   border-left: 8px solid #18CDC4;
@@ -3495,9 +3557,17 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }
 .content h1 small {
   font-size: .5em;
+}
+@media (max-width: 768px) {
+  .content h1 {
+    line-height: 1.5em;
+    font-size: 1.5em;
+  }
 }
 #to_top {
   position: fixed;
@@ -3549,6 +3619,7 @@ body {
   height: 222px;
   border-top: 1px solid #e7e7eb;
   border-left: 1px solid #e7e7eb;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 .expression_box .triangle {
   position: absolute;
@@ -3603,6 +3674,7 @@ body {
   -o-user-select: none;
   user-select: none;
   display: inline-block;
+  vertical-align: top;
 }
 .expression_box .expression_view .expression_ct .expressions li {
   font-style: normal;
@@ -3724,28 +3796,28 @@ body {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
+.option_common.active ~ .bg_active,
+.expression_footer .option_common:hover ~ .bg_active {
+  left: 0;
+}
 .option_person.active ~ .bg_active,
 .expression_footer .option_person:hover ~ .bg_active {
-  left: 0;
+  left: 16.6666%;
 }
 .option_nature.active ~ .bg_active,
 .expression_footer .option_nature:hover ~ .bg_active {
-  left: 16.6666%;
+  left: 33.3333%;
 }
 .option_material.active ~ .bg_active,
 .expression_footer .option_material:hover ~ .bg_active {
-  left: 33.3333%;
+  left: 50%;
 }
 .option_place.active ~ .bg_active,
 .expression_footer .option_place:hover ~ .bg_active {
-  left: 50%;
+  left: 66.6666%;
 }
 .option_symbol.active ~ .bg_active,
 .expression_footer .option_symbol:hover ~ .bg_active {
-  left: 66.6666%;
-}
-.option_mahjong.active ~ .bg_active,
-.expression_footer .option_mahjong:hover ~ .bg_active {
   left: 83.3333%;
 }
 .datepicker {

@@ -115,6 +115,7 @@ $(function(){
             paramObj.theme = other;
         }
         new Tip(paramObj);
+        return this;
     };
 
     // 验证
@@ -140,7 +141,8 @@ $(function(){
         switch(type){
             case 'num': tip = "请输入数字！",condition = base.isNum(val); break;
             case 'int': tip = "请输入整数！",condition = base.isInt(val); break;
-            case 'posInt': tip = "请输入不小于0的整数！",condition = base.isPosInt(val); break;
+            case 'nonnegInt': tip = "请输入不小于0的整数！",condition = base.isPosInt(val); break;
+            case 'posInt': tip = "请输入大于0的整数！",condition = base.isPosInt(val) && val != 0; break;
             default: tip = "您的输入有误！",condition = base.isNum(val);
         };
 

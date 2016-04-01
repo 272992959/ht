@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>上海厚步网络科技有限公司</title>
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
@@ -19,13 +20,16 @@
     ol>li.unfinished{
         color: #E43333;
     }
+    ol>li.improving{
+        color: #E48933;
+    }
 </style>
 </head>
 
 <body>
     <aside class="sidebar">
         <div class="top_bar">
-            <p class="logo">HouBu</p>
+            <p class="logo">LOGO</p>
             <i class="iconfont icon-654 toggle_another_form"></i>
         </div>
         <ul class="menu">
@@ -92,6 +96,13 @@
                 </a>
             </li>
             <li>
+                <a href="docking.html">
+                    <i class="iconfont icon-6f6"></i>
+                    <span class="title">对接</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
                 <a href="welcome.html">
                     <i class="iconfont icon-617"></i>
                     <span class="title">欢迎页面</span>
@@ -144,7 +155,7 @@
         <h1>待办（todo）<small>-bramble</small></h1>
         <ol>
             <li>图表（引入的百度的echarts3.0）</li>
-            <li class="unfinished">表格--->需要完善</li>
+            <li class="improving">表格--->需要对接，完善</li>
             <li>遮罩</li>
             <li>弹框</li>
             <li>tips</li>
@@ -160,14 +171,17 @@
             <li>日期计算</li>
             <li>数字千分位</li>
             <li>emoji表情控件</li>
-            <li class="unfinished">推送页面--->龙飞换成命令行，这个页面可能不要了</li>
-            <li class="unfinished">欢迎页，登录页，404页，500页，浏览器版本不兼容页。--->需要优化</li>
-            <li class="unfinished">logo--->需要设计</li>
-            <li class="unfinished">标题--->需要设计</li>
-            <li class="unfinished">验证--->需要扩展</li>
+            <li class="improving">推送页面--->龙飞换成命令行，这个页面可能不要了</li>
+            <li class="improving">欢迎页，登录页，404页，500页，浏览器版本不兼容页。--->需要优化</li>
+            <li class="improving">logo--->需要设计</li>
+            <li class="improving">标题--->需要优化</li>
+            <li class="improving">验证--->需要扩展</li>
             <li>日期控件</li>
-            <li class="unfinished">窗口>768px的情况下菜单切换状态至折叠形态时，需要做到文档渲染之前加上控制折叠的class，否则有动画或闪烁</li>
-            <li class="unfinished">html,js代码的合并压缩</li>
+            <li class="improving">窗口>768px的情况下菜单切换状态至折叠形态时，需要做到文档渲染之前加上控制折叠的class，否则有动画或闪烁</li>
+            <li class="improving">html,js代码的合并压缩</li>
+            <li class="unfinished">日期型字符串转日期</li>
+            <li class="unfinished">表格加载提示需要可以放在.table上</li>
+            <li class="unfinished">表格不要分页时显示总记录数</li>
         </ol>
     </div>
     <script src="../js/jquery.js"></script>
